@@ -1,0 +1,327 @@
+body {
+  background: #5d1b4a;
+  background: linear-gradient(297deg, rgba(93, 27, 74, 0.997934) 7%, #000004 29%, #020050 94%);
+  background-attachment: fixed; }
+
+.blockSec1__title {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  padding: 2%;
+  margin: 50px;
+  border: solid 4px #7005b3;
+  border-radius: 15px;
+  background: #140719;
+  background: linear-gradient(283deg, #140719 4%, rgba(41, 20, 82, 0.997934) 37%, #030517 71%); }
+
+header {
+  background: black;
+  background: linear-gradient(283deg, rgba(0, 0, 0, 0.997934) 11%, #180941 75%, rgba(30, 0, 45, 0.874685) 97%); }
+  header .logo {
+    width: 35%;
+    height: 35%;
+    padding-left: 10px; }
+  header ul.navbar-nav {
+    padding-left: 300px;
+    align-items: right;
+    color: white;
+    list-style-type: none;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold; }
+    header ul.navbar-nav a {
+      text-decoration: none;
+      color: white; }
+    header ul.navbar-nav li {
+      margin: 0.35rem;
+      font-size: 15px; }
+
+h3.blockSec1__text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.8;
+  padding: 20px;
+  margin-bottom: 10px; }
+
+button {
+  width: 140px;
+  height: 55px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  margin: 30px; }
+
+.botonA__saberMas, .botonB__consultar {
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  display: block; }
+
+.botonA__link {
+  color: black; }
+
+button:hover {
+  background-color: #7005b3; }
+
+.botonA__link:hover {
+  color: white;
+  text-decoration: none; }
+
+.cajaRedes__titulo, .cajaRedes__titulo--nueva {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2%;
+  margin: 25px;
+  margin-bottom: 100px;
+  border: solid 4px #7005b3;
+  border-radius: 15px;
+  background: #140719;
+  background: linear-gradient(283deg, #140719 4%, rgba(41, 20, 82, 0.997934) 37%, #030517 71%); }
+
+.cajaRedes__titulo--nueva {
+  border: solid 4px white;
+  border-radius: 15px; }
+
+.cajaRedes {
+  padding: 25px;
+  margin-bottom: 100px; }
+
+.cajaRedes__img {
+  align-items: center;
+  padding: 3px;
+  margin: 100px;
+  margin-bottom: 150px; }
+
+img.cajaRedes__img--facebook {
+  width: 120px;
+  height: 120px;
+  padding: 30px;
+  margin-left: 50px; }
+
+img.cajaRedes__img--instagram {
+  width: 120px;
+  height: 120px;
+  padding: 30px;
+  margin-left: 25px; }
+
+img.cajaRedes__img--twitter {
+  width: 120px;
+  height: 120px;
+  padding: 30px; }
+
+.cajaRedes {
+  padding: 20px; }
+
+.btn-whatsapp {
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999; }
+
+.blockSec2 {
+  text-align: center;
+  padding: 2%;
+  margin: 1%;
+  content: 2%; }
+
+.blockSec2__title {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  animation-duration: 3s;
+  animation-name: aparecerT;
+  text-align: center; }
+
+@keyframes aparecerT {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.blockSec2__contSub {
+  margin: 1%;
+  padding: 1%;
+  content: 1%;
+  padding-bottom: 6%; }
+
+.blockSec2__subTitle {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2%;
+  margin: 10px; }
+
+.estiloh2v2 {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 5px #7005b3;
+  border-radius: 5px;
+  background-color: #100136; }
+
+.estiloh3 {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  text-align: right;
+  line-height: 1.5;
+  padding: 10px; }
+
+.blockSec2__text {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 10px; }
+
+.sectionServ {
+  border: solid 10px white;
+  border-radius: 5px;
+  background: #000004;
+  background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%);
+  margin: 1px;
+  padding-left: 80px; }
+
+.options {
+  color: white;
+  padding: 1%;
+  content: 20%;
+  padding-left: 40px;
+  width: 100%;
+  height: 100%;
+  margin-top: 2%;
+  align-items: center; }
+
+.options ul li {
+  list-style-position: inside;
+  list-style-type: square;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 20px;
+  text-align: left; }
+
+.botonB__link {
+  color: black; }
+
+.botonB__link:hover {
+  color: white;
+  text-decoration: none; }
+
+.estiloh1v2 {
+  color: #eb05d1;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  padding: 5%; }
+
+.cita {
+  text-align: center;
+  padding: 10px; }
+
+.blockSec2__var {
+  color: white;
+  background: #910982;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  margin: 3%;
+  transition: width 2s, height 2s, transform 2s; }
+
+.blockSec2__var:hover {
+  font-size: 35px;
+  transform: rotate3d(180deg);
+  background: #7005b3; }
+
+.form {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+  font-size: 20px; }
+
+.site {
+  color: white;
+  text-align: center;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 20px;
+  font-weight: bold; }
+
+.estiloh4 {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px; }
+
+.imgServ {
+  width: 95%;
+  height: 95%;
+  margin-left: -10%;
+  margin-top: 2%; }
+
+.itemPort {
+  width: 5%;
+  height: 5%;
+  justify-content: center;
+  margin: 35px; }
+
+.itemPort a {
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 25px; }
+
+.formHablemos {
+  margin: 0.1%;
+  padding: 0.3%;
+  content: 7%; }
+
+.formHablemos1 {
+  margin: 0.1%;
+  padding: 0.7%; }
+
+input {
+  transition: all 1s; }
+
+.fomrHablamos1 input {
+  width: 120px;
+  height: 35px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white; }
+
+.formHablemos1 input:hover {
+  background-color: #910982;
+  color: white; }
+
+footer p {
+  color: white;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 50px;
+  content: 20px; }
