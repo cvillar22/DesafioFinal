@@ -1,0 +1,348 @@
+@import "colores";
+
+body{
+	background: $bodyRgb;
+	background: $gradientBody;
+	background-attachment: fixed;
+}
+.blockSec1__title{
+	color: $title;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 40px;
+	text-align: center;
+	padding: 2%;
+	margin: 50px;
+	border: solid 4px #7005b3;
+	border-radius: 15px;
+	background: $titleRgbFondo;
+	background: $gradientTitle;
+}
+header{
+	background: $navRgb;
+	background: $gradientNav;
+	
+	.logo{
+		width: 35%;
+		height: 35%;
+		padding-left: 10px;
+		}
+	ul.navbar-nav{
+		padding-left: 300px;
+		align-items: right;
+  		color: $text;
+  		list-style-type: none;
+  		font-family: 'Libre Franklin', sans-serif;
+  		font-weight: bold;
+
+		a{
+			text-decoration: none;
+			color: $text;
+		}
+		li{
+			margin: 0.35rem;
+			font-size: 15px;
+		}
+	}
+}
+h3.blockSec1__text{
+		color: $title;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.8;
+		padding:20px;
+		margin-bottom: 10px;
+	}
+
+button{ 
+	width: 140px;
+	height: 55px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 18px;
+	border-radius: 8px;
+	color: $btn;
+	margin: 30px;
+}
+.botonA__saberMas{
+	height: 60px;
+	justify-content:center;
+	align-items: center;
+	margin: 50px;
+	display: block;	
+}
+.botonA__link{
+		color: $btnLink;
+}
+button:hover{
+	background-color: $btnHover;
+}
+.botonA__link:hover{
+	color: $btnLinkHover;
+	text-decoration: none;
+}
+.cajaRedes__titulo{
+	color:$title;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 27px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2%;
+	margin: 25px;
+	margin-bottom: 100px;
+	border: solid 4px #7005b3;
+	border-radius: 15px;
+	background: $titleRgbFondo;
+	background: $gradientTitle;
+}
+.cajaRedes__titulo--nueva{
+	@extend .cajaRedes__titulo;
+	border: solid 4px $btn;
+	border-radius: 15px;		
+}
+.cajaRedes{
+padding: 25px;
+margin-bottom: 100px;
+}
+.cajaRedes__img{
+align-items: center; 
+padding: 3px;
+margin:100px;
+margin-bottom: 150px;
+}
+
+img.cajaRedes__img--facebook{
+	width: 120px;
+	height: 120px;
+	padding:30px;
+	margin-left:50px;
+}
+img.cajaRedes__img--instagram{
+	width: 120px;
+	height: 120px;
+	padding:30px;
+	margin-left:25px;
+}
+img.cajaRedes__img--twitter{
+	width: 120px;
+	height: 120px;
+	padding:30px;
+}
+.cajaRedes{
+padding: 20px;
+}
+.btn-whatsapp {
+        display:block;
+        width:70px;
+        height:70px;
+        position: fixed;
+        right:20px;
+        bottom:20px;
+        border-radius:50%;
+        line-height:80px;
+        text-align:center;
+        z-index:999;
+}
+.blockSec2{
+	text-align: center;
+	padding:2%;
+	margin:1%; 
+	content: 2%;
+}
+
+.blockSec2__title{
+	color: $title;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 45px;
+	animation-duration: 3s;
+	animation-name: aparecerT;
+	text-align:center;
+}
+@keyframes aparecerT {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.blockSec2__contSub{
+	margin: 1%;
+	padding:1%;
+	content: 1%;
+	padding-bottom: 6%;
+}
+.blockSec2__subTitle{
+	color:$title;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2%;
+	margin: 10px;
+}
+.estiloh2v2{
+	color:$h2v2;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	border: solid 5px #7005b3;
+	border-radius: 5px;
+	background-color:$h2v2Fondo;
+}
+.estiloh3{
+	color:$text;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 500;
+	font-size: 26px;
+	text-align:right;
+	line-height: 1.5;
+	padding:10px;
+}
+.blockSec2__text{
+	color:$text;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 500;
+	font-size: 26px;
+	text-align:justify;
+	line-height: 1.5;
+	padding:10px;
+}
+.sectionServ{
+	border: solid 10px white;
+	border-radius: 5px;
+	background: $fondoServRgb;
+	background: $fondoGradientServ;
+	margin: 1px;
+	padding-left: 80px;
+}
+.options{
+	color:$text;
+	padding: 1%;
+	content: 20%;
+	padding-left: 40px;
+	width: 100%;
+	height: 100%;
+	margin-top: 2%;
+	align-items: center;
+
+}
+.options ul li{
+	list-style-position: inside;
+	list-style-type:square;
+	font-family: 'Frank Ruhl Libre', sans-serif;
+	font-size: 20px;
+	text-align: left;
+}
+.botonB__consultar{
+	@extend.botonA__saberMas;
+}
+.botonB__link{
+		color: $btnLink;
+}
+.botonB__link:hover{
+	color: $btnLinkHover;
+	text-decoration: none;
+}
+.estiloh1v2{
+	color:$estiloh1v2;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 800;
+	font-size: 45px;
+	padding: 5%;
+}
+ .cita{
+ 	text-align: center;
+ 	padding: 10px;
+}
+
+ .blockSec2__var{
+ 	color:$text;
+ 	background:$citaFondo;
+ 	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	font-style: italic;
+	text-align: center;
+	margin:3%;
+	transition: width 2s, height 2s, transform 2s;
+ }
+
+.blockSec2__var:hover {
+	font-size: 35px;
+	transform: rotate3d(180deg);
+	background: $citaFondoHover;
+}
+.form{
+	color: $text;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+.site{
+	color: $text;
+	text-align: center;
+	font-family: 'Frank Ruhl Libre', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+.estiloh4{
+	color:$text;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 20px;
+}
+.imgServ{
+	width: 95%;
+	height: 95%;
+	margin-left: -10%;
+	margin-top: 2%;
+}
+
+
+.itemPort{
+	width: 5%;
+	height: 5%;
+	justify-content: center; 
+	margin:35px;
+}
+
+.itemPort a{
+	font-family: 'Frank Ruhl Libre', sans-serif;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 25px;
+}
+.formHablemos{
+	margin: 0.1%;
+	padding:0.3%;
+	content: 7%;
+}
+.formHablemos1{
+	margin: 0.1%;
+	padding:0.7%;
+}
+input{
+   	transition: all 1s;
+}
+.fomrHablamos1 input{
+	width: 120px;
+	height: 35px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 20px;
+	border-radius: 10px;
+	color:$input ;
+}
+.formHablemos1 input:hover{
+	background-color: $inputHover;
+	color: $input;
+}
+
+footer p {
+	color:$text;
+	font-family: 'Frank Ruhl Libre', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	margin: 50px;
+	content: 20px;
+}
