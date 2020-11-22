@@ -6,11 +6,11 @@ body {
 .blockSec1__title {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  font-size: 40px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
-  padding: 2%;
-  margin: 50px;
+  padding: 1%;
+  margin: 20px;
   border: solid 4px #7005b3;
   border-radius: 15px;
   background: #140719;
@@ -20,11 +20,23 @@ header {
   background: black;
   background: linear-gradient(283deg, rgba(0, 0, 0, 0.997934) 11%, #180941 75%, rgba(30, 0, 45, 0.874685) 97%); }
   header .logo {
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 768px) {
+      header .logo {
+        width: 45%;
+        height: 45%; } }
+  header .navbar-toggler {
+    width: max-content; }
+  header a.navbar-brand {
     width: 35%;
     height: 35%;
-    padding-left: 10px; }
+    padding-left: 1px; }
+    @media (max-width: 320px) {
+      header a.navbar-brand {
+        width: 100%;
+        height: 100%; } }
   header ul.navbar-nav {
-    padding-left: 300px;
     align-items: right;
     color: white;
     list-style-type: none;
@@ -41,9 +53,10 @@ h3.blockSec1__text {
   color: white;
   text-align: center;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.5;
   padding: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-size: 25px; }
 
 button {
   width: 140px;
@@ -74,12 +87,12 @@ button:hover {
 .cajaRedes__titulo, .cajaRedes__titulo--nueva {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  font-size: 27px;
+  font-weight: 600;
+  font-size: 25px;
   text-transform: uppercase;
   text-align: center;
-  padding: 2%;
-  margin: 25px;
+  padding: 1%;
+  margin: 20px;
   margin-bottom: 100px;
   border: solid 4px #7005b3;
   border-radius: 15px;
@@ -103,14 +116,12 @@ button:hover {
 img.cajaRedes__img--facebook {
   width: 120px;
   height: 120px;
-  padding: 30px;
-  margin-left: 50px; }
+  padding: 30px; }
 
 img.cajaRedes__img--instagram {
   width: 120px;
   height: 120px;
-  padding: 30px;
-  margin-left: 25px; }
+  padding: 30px; }
 
 img.cajaRedes__img--twitter {
   width: 120px;
@@ -141,8 +152,8 @@ img.cajaRedes__img--twitter {
 .blockSec2__title {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  font-size: 45px;
+  font-weight: 600;
+  font-size: 30px;
   animation-duration: 3s;
   animation-name: aparecerT;
   text-align: center; }
@@ -162,8 +173,8 @@ img.cajaRedes__img--twitter {
 .blockSec2__subTitle {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 25px;
   text-transform: uppercase;
   text-align: center;
   padding: 2%;
@@ -183,19 +194,19 @@ img.cajaRedes__img--twitter {
 .estiloh3 {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 500;
-  font-size: 26px;
+  font-weight: 300;
+  font-size: 20px;
   text-align: right;
-  line-height: 1.5;
+  line-height: 1.3;
   padding: 10px; }
 
 .blockSec2__text {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 500;
-  font-size: 26px;
+  font-weight: 300;
+  font-size: 20px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.3;
   padding: 10px; }
 
 .sectionServ {
@@ -233,8 +244,8 @@ img.cajaRedes__img--twitter {
 .estiloh1v2 {
   color: #eb05d1;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 800;
-  font-size: 45px;
+  font-weight: 600;
+  font-size: 30px;
   padding: 5%; }
 
 .cita {
@@ -245,7 +256,7 @@ img.cajaRedes__img--twitter {
   color: white;
   background: #910982;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 25px;
   font-style: italic;
   text-align: center;
