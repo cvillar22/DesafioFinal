@@ -159,6 +159,10 @@ padding: 20px;
         text-align:center;
         z-index:999;
 }
+.btn_whatsapp--img{
+    width: 60px;
+  height: 60px ;
+ }
 .blockSec2{
 	text-align: center;
 	padding:1%;
@@ -363,7 +367,21 @@ a.botonB__link:hover{
 	display: inline-block;
 	justify-content: center; 
 	margin-bottom:25px;
-    	@media(min-width: 420px){ max-width: 50%;}
+	animation-name: aniPort;
+  	position: relative;
+  	animation-iteration-count: infinite;
+  	animation-duration: 10s;
+  	animation-direction: alternate-reverse;
+    	@media(min-width: 420px){ max-width: 50%;
+    		animation-direction: 0s;}
+}
+@keyframes aniPort {
+  0%   {right:0px; top:0px;}
+  25%  {right:50px; top:0px;}
+  100% {right:0px; top:0px;}
+  0%  {left:0px; top:0px;}
+  25%  {left:50px; top:0px;}
+  100% {left:0px; top:0px;}
 }
 .itemPort a{
 	font-family: 'Frank Ruhl Libre', sans-serif;
