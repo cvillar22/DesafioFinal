@@ -369,8 +369,7 @@ a.botonB__link:hover {
   animation-direction: alternate-reverse; }
   @media (min-width: 420px) {
     .itemPort {
-      max-width: 50%;
-      animation-direction: 0s; } }
+      max-width: 50%; } }
 
 @keyframes aniPort {
   0% {
