@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Comunicate con nosotros. Hablanos de tu proyecto.">
 	<meta name="keywords" content="Beonnet desarrollo web digital página web sitio digital, internet, información contacto request inquiry saber más clientes servicios venta redes online">
-	<title>Beonnet: Contacto</title>
+	<title>Beonnet: Carrito</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../Css/style1.css">
 	<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Libre+Franklin:ital,wght@0,300;0,500;0,800;0,900;1,300;1,500;1,800&display=swap" rel="stylesheet">
@@ -33,9 +33,9 @@
 	      				<li class="nav-item">
 	        			<a class="nav-link" href="nosotros.html">NOSOTROS</a>
 	      				</li>
-	      				<li class="nav-item active">
+	      				<li class="nav-item">
 	        			<a class="nav-link" href="contacto.html">CONTACTO</a>
-	        			<li class="nav-item">
+	        			<li class="nav-item active">
 	        			<a class="nav-link" href="carrito.html"><img class="imgcarro" src="../Images/shoppingcart.png"></a>
       				</li>			
                 </ul>
@@ -48,43 +48,37 @@
 		<div class="row">
 			<div class="col-lg-12 col-sm-12">
 				<div class="blockSec2">
-					<h1 class="blockSec2__title">HABLEMOS</h1>
+					<h1 class="blockSec2__title">Mis Servicios</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12 col-sm-12">
-				<form class="form" action="#" method="post">
-				<fieldset>
-				<legend>Información Personal:</legend>
-				<div class="formHablemos">Nombre y Apellido:</div>
-					<input class="formHablemos" type="text" placeholder="Nombre y Apellido">
-				<div class="formHablemos">Teléfono:</div>
-					<input  class="formHablemos"type="text" placeholder="Telefono">
-				<div class="formHablemos">E-mail:</div>
-					<input class="formHablemos" type="E-mail" placeholder="tu e-mail">			
-				<label class="formHablemos" for="Estado civil">Servicio:</label>	
-				<select name="Servicio">
-					<option value="Landing">Landing Page</option>
-					<option value="Web Standard">Web Standard</option>
-					<option value="Tienda">Tienda</option>
-					<option value="Web Corporativa">Web Corporativa</option>
-					<option value="Otra">Otra</option>
-				</select>
-				<div class="formHablemos1"></div>
-					<textarea name=comentarios id="comentarios"cols="25" rows="15">Cometarios</textarea>	
-				<div class="formHablemos1">
-				<input type="reset" value="Resetear formulario">
-				<input type="submit" value="Enviar formulario">
+</section>
+<section>	
+		<div class="container">
+    		<div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        		<main id="items" class="col-sm-12 row"></main>
+        <!-- Carrito -->
+        			<aside class="col-sm-12">
+            			<h2 class="estiloh3">Carrito</h2>
+            <!-- Elementos del carrito -->
+            				<ul id="carrito" class="list-group"></ul>
+            				<hr>
+            <!-- Precio total -->
+            <p class="estiloh3" class="text-left">Total: <span id="total"></span></p>   
+        </aside>
+        </div>
+        <div class="row">
+        	<div class="col-lg-3 col-3"></div>
+				<div class="col-lg-4 col-4">
+			 	<button id="boton-vaciar" class="btn btn-warning btn-lg p-0">Vaciar</button>
 				</div>
-				</fieldset>
-			</form>
-		</div>
-	</div>
-	<div class="alert alert-success alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <strong>GRACIAS!!</strong> vamos a responderte los más antes posible!
-  </div>
+				<div class="col-lg-4 col-4">
+					<button id="boton-vaciar" class="btn btn-success btn-lg p-0">Mio!</button>
+				</div>	  
+				<div class="col-lg-1 col-1"></div>  
+    </div>
+</div>
 </section>
 <div class="btn-whatsapp">
 		<a href="https://api.whatsapp.com/send?phone=5199999999" target="_blank">
