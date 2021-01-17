@@ -435,3 +435,51 @@ footer p {
 		font-size: 15px;
 		align-items: center;
 }
+.popup{
+	width: 800px;
+	height: 480px;
+	position: fixed;
+	top: 0;
+	margin-left: 22%;
+	border: solid 10px #e3a805;
+	border-radius: 5px;
+	background: $fondoServRgb;
+	background: $fondoGradientServ;
+	@media(max-width: 479px){border: solid 5px white;
+	border-radius: 5px;
+	background: $fondoServRgb;
+	background: $fondoGradientServ;
+
+}
+	
+}
+img.carrito{
+	width: 110%;
+    height: 110%;
+    margin-top: 0px;
+    margin-left: 52px;
+    padding-left: 5%;
+    @media(min-width: 768px){ width: 50%; height:50%;}
+}
+.h3Carrito{
+	color:#e3a805;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 500;
+	padding: 0px;
+	margin-top: 10%;
+	margin-left: 37px;
+
+}
+.h4Carrito{
+	color:$text;
+	font-family: 'Libre Franklin', sans-serif;
+	margin-left:-20px;
+
+}
+.hide{
+	display: none;
+
+}
+.unhide{
+	display: block;
+}

@@ -444,3 +444,50 @@ footer p {
   color: black;
   font-size: 15px;
   align-items: center; }
+
+.popup {
+  width: 800px;
+  height: 480px;
+  position: fixed;
+  top: 0;
+  margin-left: 22%;
+  border: solid 10px #e3a805;
+  border-radius: 5px;
+  background: #000004;
+  background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%); }
+  @media (max-width: 479px) {
+    .popup {
+      border: solid 5px white;
+      border-radius: 5px;
+      background: #000004;
+      background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%); } }
+
+img.carrito {
+  width: 110%;
+  height: 110%;
+  margin-top: 0px;
+  margin-left: 52px;
+  padding-left: 5%; }
+  @media (min-width: 768px) {
+    img.carrito {
+      width: 50%;
+      height: 50%; } }
+
+.h3Carrito {
+  color: #e3a805;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+  padding: 0px;
+  margin-top: 10%;
+  margin-left: 37px; }
+
+.h4Carrito {
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  margin-left: -20px; }
+
+.hide {
+  display: none; }
+
+.unhide {
+  display: block; }

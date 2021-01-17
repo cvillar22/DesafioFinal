@@ -36,7 +36,7 @@
 	      				<li class="nav-item">
 	        			<a class="nav-link" href="contacto.html">CONTACTO</a>
 	        			<li class="nav-item">
-	        			<a class="nav-link" href="carrito.html"><img class="imgcarro" src="../Images/shoppingcart.png"></a>
+	        			<a class="nav-link"><img id='imgCarrito'class="imgcarro" src="../Images/shoppingcart.png"></a>
       				</li>			
                 </ul>
               </div>
@@ -104,7 +104,7 @@
 					 <button  type="button"  class="btn-block"class="botonB__consultar"><a href="contacto.html" class="botonB__link" >CONSULTAR</a></button>
 				</div>
 				<div class="col-lg-4 col-4" class="botonB">
-					 <button value="1" type="button"  class="btn-block"class="botonB__consultar"><a href="carrito.html" class="botonB__link" >COMPRAR</a></button>
+					<button value="1" type="button"  class="btn-block botonB__consultar btnBuy">COMPRAR</button>
 				</div>
 				<div class="col-lg-2 col-2"></div>
 			</div>
@@ -160,7 +160,7 @@
 					 <button  type="button"  class="btn-block"class="botonB__consultar"><a href="contacto.html" class="botonB__link" >CONSULTAR</a></button>
 				</div>
 				<div class="col-lg-4 col-4" class="botonB">
-					 <button value="2" type="button"  class="btn-block"class="botonB__consultar"><a href="carrito.html" class="botonB__link" >COMPRAR</a></button>
+					 <button value="2" type="button"  class="btn-block botonB__consultar btnBuy">COMPRAR</button>
 				</div>
 				<div class="col-lg-2 col-2"></div>		
 	</div>
@@ -216,7 +216,7 @@
 					 <button  type="button"  class="btn-block"class="botonB__consultar"><a href="contacto.html" class="botonB__link" >CONSULTAR</a></button>
 				</div>
 				<div class="col-lg-4 col-4" class="botonB">
-					 <button value="3" type="button"  class="btn-block"class="botonB__consultar"><a href="carrito.html" class="botonB__link" >COMPRAR</a></button>
+					 <button value="3" type="button" class="btn-block botonB__consultar btnBuy">COMPRAR</button>
 				</div>
 		</div>
 	</div>
@@ -273,7 +273,7 @@
 					 <button  type="button"  class="btn-block"class="botonB__consultar"><a href="contacto.html" class="botonB__link" >CONSULTAR</a></button>
 				</div>
 				<div class="col-lg-4 col-4" class="botonB">
-					 <button value="4" type="button"  class="btn-block"class="botonB__consultar"><a href="carrito.html" class="botonB__link" >COMPRAR</a></button>
+					<button value="4" type="button"  class="btn-block botonB__consultar btnBuy">COMPRAR</button>
 				</div>
 				<div class="col-lg-2 col-2"></div>
 		</div>
@@ -285,8 +285,54 @@
 			</div>
 		</div>
 	</div>
+	<div class="container popup hide">
+		<div class="row align-items-center">
+			<div class="col-lg-3 col-sm-4"></div>
+			<div class="col-lg-1 col-sm-1"></div>
+			<div class="col-lg-4 col-sm-4"><h3 class="h3Carrito">MI COMPRA</h3></div>
+			<div class="col-lg-1 col-sm-1"></div>
+			<div class="col-lg-3 col-sm-2"></div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-lg-3 col-sm-5"></div>
+			<div class="col-lg-1 col-sm-5"></div>
+			<div class="col-lg-4 col-sm-4"><img class="carrito" src="../Images/shoppingcart.png"></div>
+			<div class="col-lg-1 col-sm-3"></div>
+			<div class="col-lg-4 col-sm-3"></div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-lg-5 col-sm-5"></div>
+			<div class="col-lg-4 col-sm-4"><h4 class="h4Carrito" id="planFinal"></h4></div>
+			<div class="col-lg-3 col-sm-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-sm-5"></div>
+			<div class="col-lg-3 col-sm-5"><h5 class="h4Carrito" id="precioFinal"></h5></div>
+			<div class="col-lg-4 col-sm-3"></div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-lg-3 col-sm-5"></div>
+			<div class="col-lg-1 col-sm-5"></div>
+			<div class="col-lg-3 col-sm-4"><button id="Descuento" type="button"  class="btn-block" class="botonB__consultar"class="botonB__link"> Descuento</button></div>
+			<div class="col-lg-2 col-sm-3"></div>
+			<div class="col-lg-3 col-sm-5"></div>
+		</div>
+		<div class="row">
+        	<div class="col-lg-1 col-3"></div>
+			<div class="col-lg-3 col-4">
+			 	<button id="boton-vaciar" class="btn-block btnVaciar" >Vaciar</button>
+			</div>
+			<div class="col-lg-3 col-3"></div>
+			<div class="col-lg-3 col-4">
+				<button id="boton-comprar" class="btn-block" class="botonComprar">Comprar!</button>
+			</div>	  
+			<div class="col-lg-2 col-1"></div>  
+    	</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="../js/objeto.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
