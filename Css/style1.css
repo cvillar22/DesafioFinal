@@ -50,8 +50,8 @@ header {
       font-size: 15px; }
 
 img.imgcarro {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   margin-top: 0px; }
   @media (min-width: 768px) {
     img.imgcarro {
@@ -447,7 +447,7 @@ footer p {
 
 .popup {
   width: 800px;
-  height: 480px;
+  height: 550px;
   position: fixed;
   top: 0;
   margin-left: 22%;
@@ -490,4 +490,10 @@ img.carrito {
   display: none; }
 
 .unhide {
+  display: block; }
+
+.btnBuy {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
   display: block; }

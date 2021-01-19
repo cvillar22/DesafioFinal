@@ -53,8 +53,8 @@ header{
 	}
 }
 img.imgcarro{
-	width: 50%;
-    height: 50%;
+	width: 100%;
+    height: 100%;
     margin-top: 0px;
     @media(min-width: 768px){ width: 50%; height:50%;}
 
@@ -431,13 +431,13 @@ footer p {
 	content: 20px;
 }
 #boton-vaciar{
-	color: $btnLink;
+		color: $btnLink;
 		font-size: 15px;
 		align-items: center;
 }
 .popup{
 	width: 800px;
-	height: 480px;
+	height: 550px;
 	position: fixed;
 	top: 0;
 	margin-left: 22%;
@@ -481,5 +481,11 @@ img.carrito{
 
 }
 .unhide{
+	display: block;
+}
+.btnBuy{
+	height: 35px;
+	justify-content:center;
+	align-items: center;
 	display: block;
 }

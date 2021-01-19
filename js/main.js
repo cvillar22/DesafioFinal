@@ -34,7 +34,7 @@ let discountCodes = [
         valor: 0.20,
     }
 ];
-
+let btnChargePlan = document.getElementById('chargePlan');
 let descuento = document.getElementById('Descuento');
 let btnBuy = document.querySelectorAll('.btnBuy');
 let btnVaciar = document.querySelector('.btnVaciar');
@@ -46,33 +46,38 @@ let htmlPopup = {
     popup: document.querySelector('.popup'),
     precioFinal: document.getElementById('precioFinal'),
     planFinal: document.getElementById('planFinal'),
+    planJistory: document.getElementById('sawPlan'),
 }; //objeto literal
+let jistory = new Jistory();
 
 function listaPlanes(baseDeDatos){
     let planes = [];
     baseDeDatos.forEach(dato => planes.push(new Plan(dato.id, dato.nombre, dato.precio)));
     return planes;
 }
-//Evento
+//Evento 
 function addElements(btnBuy){
     for(let boton of btnBuy){
         boton.addEventListener("click", fullCart);
         boton.addEventListener('click',unHidePopUp);
     }
-    function fullCart(evento){
+    
+}
+function fullCart(evento){
         let selectedPlan = promo.find(plan => plan.id == evento.target.value);
         carrito.addItem(selectedPlan);
         carrito.upLoadPlan(htmlPopup);
-    }
 }
 //Evento2
 imgCarrito.addEventListener('click',unHidePopUp);
 btnVaciar.addEventListener('click', removeCart);
 descuento.addEventListener('click',applyDiscount);
+btnChargePlan.addEventListener('click', fullCart);
 
 function unHidePopUp(){
     if (carrito.status()) { 
         console.log('hayPlan');
+        jistory.loadPlan(htmlPopup, btnChargePlan);
         htmlPopup.popup.classList.replace('hide','unHide');}
          else {
             console.log('noHayPlan');
@@ -80,15 +85,17 @@ function unHidePopUp(){
         };
 }
 function removeCart(){
+    jistory.addItem(carrito.selectedPlan);
+    jistory.savedPlan();
     carrito.removeItem();
     unHidePopUp();
 }
 function applyDiscount(evento){
-evento.target.style.display = "none";
-carrito.discount(discountCodes);
-carrito.upLoadPlan(htmlPopup);
-
+    evento.target.style.display = "none";
+    carrito.discount(discountCodes);
+    carrito.upLoadPlan(htmlPopup);
 }
+
 
 
 
