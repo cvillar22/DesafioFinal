@@ -1,5 +1,5 @@
 //al hacer click vaciar carrito , ese plan seleccionado queda en la memoria. :D
-//En el caso de comprar otro producto, que abajo traiga el plan seleccionado anteriormente y 
+//En el caso de elegir otro producto, que abajo traiga el plan seleccionado anteriormente y 
 //al hacer click ahi me actualice el carrito con ese plan.
 
 class Jistory{

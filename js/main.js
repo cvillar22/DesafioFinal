@@ -34,6 +34,8 @@ let discountCodes = [
         valor: 0.20,
     }
 ];
+let btnLoCompra = document.getElementById('boton-comprar');
+let closeCart = document.getElementById('closeCart');
 let btnChargePlan = document.getElementById('chargePlan');
 let descuento = document.getElementById('Descuento');
 let btnBuy = document.querySelectorAll('.btnBuy');
@@ -68,11 +70,14 @@ function fullCart(evento){
         carrito.addItem(selectedPlan);
         carrito.upLoadPlan(htmlPopup);
 }
-//Evento2
+//Eventos
 imgCarrito.addEventListener('click',unHidePopUp);
 btnVaciar.addEventListener('click', removeCart);
 descuento.addEventListener('click',applyDiscount);
 btnChargePlan.addEventListener('click', fullCart);
+closeCart.addEventListener('click', removeCart);
+btnLoCompra.addEventListener('click', msjBuy);
+
 
 function unHidePopUp(){
     if (carrito.status()) { 
@@ -95,8 +100,17 @@ function applyDiscount(evento){
     carrito.discount(discountCodes);
     carrito.upLoadPlan(htmlPopup);
 }
-
-
+function cerrarCart(evento){
+    jistory.addItem(carrito.selectedPlan);
+    jistory.savedPlan();
+    carrito.removeItem();
+    unHidePopUp();
+}
+function msjBuy(evento){
+    alert('GRACIAS POR TU COMPRA');
+    carrito.removeItem();
+    unHidePopUp();
+}
 
 
 
