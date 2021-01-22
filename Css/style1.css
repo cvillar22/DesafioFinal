@@ -133,19 +133,14 @@ a.botonA__link:hover {
   margin-bottom: 150px; }
 
 img.cajaRedes__img--facebook {
-  width: 120px;
-  height: 120px;
-  padding: 30px; }
+  max-width: 100%;
+  margin-left: 10%; }
 
 img.cajaRedes__img--instagram {
-  width: 120px;
-  height: 120px;
-  padding: 30px; }
+  max-width: 100%; }
 
 img.cajaRedes__img--twitter {
-  width: 120px;
-  height: 120px;
-  padding: 30px; }
+  max-width: 100%; }
 
 .cajaRedes {
   padding: 20px; }
@@ -458,21 +453,26 @@ footer p {
   font: bold; }
 
 .popup {
-  width: 800px;
-  height: 550px;
+  max-width: 800px;
+  min-height: 500px;
   position: fixed;
+  bottom: 30px;
   top: 0;
   margin-left: 22%;
   border: solid 10px #e3a805;
   border-radius: 5px;
   background: #000004;
-  background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%); }
+  background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%);
+  z-index: 1024;
+  overflow: scroll; }
   @media (max-width: 479px) {
     .popup {
       border: solid 5px white;
       border-radius: 5px;
       background: #000004;
-      background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%); } }
+      background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%);
+      margin: 0px;
+      left: 0px; } }
 
 img.carrito {
   width: 50%;
@@ -482,8 +482,8 @@ img.carrito {
   padding-left: 5%; }
   @media (max-width: 990px) {
     img.carrito {
-      width: 15%;
-      height: 15%; } }
+      width: 25%;
+      height: 25%; } }
 
 .h3Carrito {
   color: #e3a805;
@@ -507,7 +507,7 @@ img.carrito {
   display: none; }
 
 .unhide {
-  display: block; }
+  display: inline-block; }
 
 .btnBuy {
   color: black;
