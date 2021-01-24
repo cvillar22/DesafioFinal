@@ -463,8 +463,7 @@ footer p {
   border-radius: 5px;
   background: #000004;
   background: linear-gradient(283deg, rgba(0, 0, 4, 0.997934) 20%, #170941 48%, rgba(0, 0, 0, 0.922006) 75%);
-  z-index: 1024;
-  overflow: scroll; }
+  z-index: 1024; }
   @media (max-width: 479px) {
     .popup {
       border: solid 5px white;
@@ -516,3 +515,12 @@ img.carrito {
   align-items: center;
   display: block;
   font-size: 15px; }
+
+.inputDesc {
+  visibility: hidden; }
+
+.inputDesc.visible {
+  visibility: visible;
+  font-weight: bold;
+  padding: 3px;
+  padding-bottom: 2px; }

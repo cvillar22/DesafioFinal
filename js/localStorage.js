@@ -14,8 +14,8 @@ class Jistory{
 	loadPlan(htmlPopup, btnChargePlan){
 		let savedItem = JSON.parse(localStorage.getItem('selectedBefore'));
 		if(savedItem){
-		htmlPopup.planJistory.textContent = `Plan visto anteriormente: ${savedItem.nombre}`;
-		btnChargePlan.value = savedItem.id;
+		htmlPopup.planJistory.text(`Plan visto anteriormente: ${savedItem.nombre}`);
+		btnChargePlan.val(savedItem.id);
 		}
 	}
 

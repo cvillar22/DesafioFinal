@@ -34,59 +34,56 @@ let discountCodes = [
         valor: 0.20,
     }
 ];
-let btnLoCompra = document.getElementById('boton-comprar');
-let closeCart = document.getElementById('closeCart');
-let btnChargePlan = document.getElementById('chargePlan');
-let descuento = document.getElementById('Descuento');
-let btnBuy = document.querySelectorAll('.btnBuy');
-let btnVaciar = document.querySelector('.btnVaciar');
+let btnLoCompra = $("#boton-comprar");
+let closeCart = $("#closeCart");
+let btnChargePlan = $("#chargePlan");
+let descuento = $("#Descuento");
+let btnBuy = $(".btnBuy");
+let btnVaciar = $(".btnVaciar");
 let carrito = new Carrito();// es la creación de un solo carrito
 let promo = listaPlanes(baseDeDatos);//lamar una funcion
-let imgCarrito = document.getElementById('imgCarrito');
-addElements(btnBuy);
+let imgCarrito = $("#imgCarrito");
 let htmlPopup = {
-    popup: document.querySelector('.popup'),
-    precioFinal: document.getElementById('precioFinal'),
-    planFinal: document.getElementById('planFinal'),
-    planJistory: document.getElementById('sawPlan'),
+    popup: $(".popup"),
+    precioFinal: $("#precioFinal"),
+    planFinal: $("#planFinal"),
+    planJistory: $("#sawPlan"),
 }; //objeto literal
 let jistory = new Jistory();
+let input = $(".inputDesc");
 
 function listaPlanes(baseDeDatos){
     let planes = [];
     baseDeDatos.forEach(dato => planes.push(new Plan(dato.id, dato.nombre, dato.precio)));
     return planes;
 }
-//Evento 
-function addElements(btnBuy){
-    for(let boton of btnBuy){
-        boton.addEventListener("click", fullCart);
-        boton.addEventListener('click',unHidePopUp);
-    }
-    
-}
+
 function fullCart(evento){
-        let selectedPlan = promo.find(plan => plan.id == evento.target.value);
+        let target = $(evento.target);
+        let selectedPlan = promo.find(plan => plan.id == target.val());
         carrito.addItem(selectedPlan);
         carrito.upLoadPlan(htmlPopup);
+        unHidePopUp();
 }
 //Eventos
-imgCarrito.addEventListener('click',unHidePopUp);
-btnVaciar.addEventListener('click', removeCart);
-descuento.addEventListener('click',applyDiscount);
-btnChargePlan.addEventListener('click', fullCart);
-closeCart.addEventListener('click', removeCart);
-btnLoCompra.addEventListener('click', msjBuy);
+btnBuy.click(fullCart);
+imgCarrito.click(unHidePopUp);
+btnVaciar.click(removeCart);
+descuento.click(applyDiscount);
+btnChargePlan.click(fullCart);
+closeCart.click(removeCart);
+btnLoCompra.click(msjBuy);
+input.keypress(pressEnter);
 
 
 function unHidePopUp(){
     if (carrito.status()) { 
         console.log('hayPlan');
         jistory.loadPlan(htmlPopup, btnChargePlan);
-        htmlPopup.popup.classList.replace('hide','unHide');}
+        htmlPopup.popup.removeClass("hide").addClass("unHide");}
          else {
             console.log('noHayPlan');
-            htmlPopup.popup.classList.replace('unHide','hide');
+            htmlPopup.popup.removeClass("unHide").addClass("hide");
         };
 }
 function removeCart(){
@@ -96,10 +93,9 @@ function removeCart(){
     unHidePopUp();
 }
 function applyDiscount(evento){
-    evento.target.style.display = "none";
-    carrito.discount(discountCodes);
-    carrito.upLoadPlan(htmlPopup);
+    input.toggleClass("visible");
 }
+
 function cerrarCart(evento){
     jistory.addItem(carrito.selectedPlan);
     jistory.savedPlan();
@@ -111,6 +107,16 @@ function msjBuy(evento){
     carrito.removeItem();
     unHidePopUp();
 }
+function pressEnter(evento){
+    let target = $(evento.target);
+    if ( evento.which == 13 ) {
+    let cupon = carrito.discount(discountCodes,target.val());
+    
+        if(cupon){carrito.upLoadPlan(htmlPopup);
+        target.prop("disabled",true)};
+  }
+}
+
 
 
 
