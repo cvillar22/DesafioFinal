@@ -1,6 +1,7 @@
 //objeto
 class Carrito{
     selectedPlan = null;
+    hasPlanDisc = false;
 	calculateTotal(){
 	  return "total";
 	}
@@ -18,13 +19,14 @@ class Carrito{
 	}
 	removeItem(){
 		this.selectedPlan = null;
+		this.hasPlanDisc = false;
 	}
 	discount(discountCodes,discount){
 		if (this.status()) {
 			let code = discountCodes.find(code => code.nombre == discount);
 			if (code){
 				this.selectedPlan.precio = this.selectedPlan.precio - (this.selectedPlan.precio * code.valor);//calcular el precio con el descuento
-				return true;
+				this.hasPlanDisc = true;
 			};
 		};
 	}

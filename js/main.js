@@ -69,7 +69,7 @@ function fullCart(evento){
 btnBuy.click(fullCart);
 imgCarrito.click(unHidePopUp);
 btnVaciar.click(removeCart);
-descuento.click(applyDiscount);
+descuento.click(showDiscount);
 btnChargePlan.click(fullCart);
 closeCart.click(removeCart);
 btnLoCompra.click(msjBuy);
@@ -90,31 +90,34 @@ function removeCart(){
     jistory.addItem(carrito.selectedPlan);
     jistory.savedPlan();
     carrito.removeItem();
+    disabledInput(false);
     unHidePopUp();
+
 }
-function applyDiscount(evento){
+function showDiscount(){
     input.toggleClass("visible");
 }
 
-function cerrarCart(evento){
-    jistory.addItem(carrito.selectedPlan);
-    jistory.savedPlan();
-    carrito.removeItem();
-    unHidePopUp();
-}
-function msjBuy(evento){
+function msjBuy(){
     alert('GRACIAS POR TU COMPRA');
     carrito.removeItem();
+    disabledInput(false);
     unHidePopUp();
 }
 function pressEnter(evento){
     let target = $(evento.target);
     if ( evento.which == 13 ) {
-    let cupon = carrito.discount(discountCodes,target.val());
-    
-        if(cupon){carrito.upLoadPlan(htmlPopup);
-        target.prop("disabled",true)};
+    carrito.discount(discountCodes,target.val().toUpperCase());
+    carrito.upLoadPlan(htmlPopup);
+    target.prop("disabled",carrito.hasPlanDisc);
+    if (carrito.hasPlanDisc){disabledInput(true);
+    }
   }
+}
+
+function disabledInput(val){
+    input.prop("disabled",val);
+
 }
 
 
