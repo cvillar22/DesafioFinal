@@ -34,6 +34,7 @@ let discountCodes = [
         valor: 0.20,
     }
 ];
+let carImg = $(".carrito");
 let btnLoCompra = $("#boton-comprar");
 let closeCart = $("#closeCart");
 let btnChargePlan = $("#chargePlan");
@@ -80,10 +81,12 @@ function unHidePopUp(){
     if (carrito.status()) { 
         console.log('hayPlan');
         jistory.loadPlan(htmlPopup, btnChargePlan);
-        htmlPopup.popup.removeClass("hide").addClass("unHide");}
+        htmlPopup.popup.fadeIn(500);
+        carImg.addClass("animate__animated animate__heartBeat animate__infinite");
+                }
          else {
             console.log('noHayPlan');
-            htmlPopup.popup.removeClass("unHide").addClass("hide");
+            htmlPopup.popup.fadeOut(500);
         };
 }
 function removeCart(){
@@ -92,6 +95,7 @@ function removeCart(){
     carrito.removeItem();
     disabledInput(false);
     unHidePopUp();
+    input.removeClass("animate__animated animate__zoomIn");
 
 }
 function showDiscount(){
@@ -103,14 +107,15 @@ function msjBuy(){
     carrito.removeItem();
     disabledInput(false);
     unHidePopUp();
+    input.removeClass("animate__animated animate__zoomIn");
 }
 function pressEnter(evento){
     let target = $(evento.target);
     if ( evento.which == 13 ) {
     carrito.discount(discountCodes,target.val().toUpperCase());
     carrito.upLoadPlan(htmlPopup);
-    target.prop("disabled",carrito.hasPlanDisc);
     if (carrito.hasPlanDisc){disabledInput(true);
+        target.addClass("animate__animated animate__zoomIn");
     }
   }
 }
@@ -119,6 +124,8 @@ function disabledInput(val){
     input.prop("disabled",val);
 
 }
+
+
 
 
 
