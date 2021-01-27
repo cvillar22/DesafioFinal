@@ -23,6 +23,10 @@ y le da la posibilidad de volverlo a CARGAR.
 Finalmente el boton de COMPRAR!, es el que se va a utilizar para finalizar la transacción en la página, la idea es que rediriga a una plataforma
 de pago. Por el momento coloque una Alert para agradecer la compra.
 
+   Incorporación de JQUERY al proyecto:
+Se realizó la modificacion del código dentro del archivo JS main, para poder aplicar JQUERY al proyecto, utilizando selectores, eventos, funciones y 
+se incorporó la librería que ofrece ANIMATE.CSS.
+
 */
 
 
