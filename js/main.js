@@ -1,29 +1,3 @@
-//variables
-let baseDeDatos = [
-    {
-        id: 1,
-        nombre: 'Landing',
-        precio: 20500,
-    },
-    {
-        id: 2,
-        nombre: 'Standard',
-        precio: 25500,
-       
-    },
-    {
-        id: 3,
-        nombre: 'Tienda',
-        precio: 33500,
-    },
-    {
-        id: 4,
-        nombre: 'Corporativa',
-        precio: 40500,
-    }
-
-];
-
 let discountCodes = [
     {
         nombre: 'BEONNET',
@@ -42,7 +16,7 @@ let descuento = $("#Descuento");
 let btnBuy = $(".btnBuy");
 let btnVaciar = $(".btnVaciar");
 let carrito = new Carrito();// es la creación de un solo carrito
-let promo = listaPlanes(baseDeDatos);//lamar una funcion
+let promo;
 let imgCarrito = $("#imgCarrito");
 let htmlPopup = {
     popup: $(".popup"),
@@ -52,6 +26,14 @@ let htmlPopup = {
 }; //objeto literal
 let jistory = new Jistory();
 let input = $(".inputDesc");
+
+$.ajax({
+    url: "../js/data.json",
+    type: "GET",
+    dataType: "json",
+success: json => promo = listaPlanes(json),
+error: xhr => console.log("Hubo un problema al cargar los planes, error: " + xhr.statusText),
+});
 
 function listaPlanes(baseDeDatos){
     let planes = [];
@@ -75,7 +57,6 @@ btnChargePlan.click(fullCart);
 closeCart.click(removeCart);
 btnLoCompra.click(msjBuy);
 input.keypress(pressEnter);
-
 
 function unHidePopUp(){
     if (carrito.status()) { 

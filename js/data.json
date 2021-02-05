@@ -1,0 +1,24 @@
+ [
+    {
+        "id": 1,
+        "nombre": "Landing",
+        "precio": 20500
+    },
+    {
+        "id": 2,
+        "nombre": "Standard",
+        "precio": 25500
+       
+    },
+    {
+        "id": 3,
+        "nombre": "Tienda",
+        "precio": 33500
+    },
+    {
+        "id": 4,
+        "nombre": "Corporativa",
+        "precio": 40500
+    }
+
+]
