@@ -23,6 +23,10 @@ y le da la posibilidad de volverlo a CARGAR.
 Finalmente el boton de COMPRAR!, es el que se va a utilizar para finalizar la transacción en la página, la idea es que rediriga a una plataforma
 de pago. Por el momento coloque una Alert para agradecer la compra.
 
+   III. Entrega 3:
+En esta instancia se agrega al desafio la incorporación de jQuery para controlar elementos,se incorporó la librería que ofrece ANIMATE.CSS;
+sumando así efectos y animaciones
+
 */
 
 
