@@ -138,14 +138,22 @@ margin-bottom: 150px;
 }
 
 img.cajaRedes__img--facebook{
-	max-width: 100%;
-	margin-left: 10%;
+	max-width: 45%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 img.cajaRedes__img--instagram{
-	max-width: 100%;
+	max-width: 45%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 img.cajaRedes__img--twitter{
-	max-width: 100%;
+	max-width: 45%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 .cajaRedes{
 padding: 20px;
@@ -501,7 +509,7 @@ img.carrito{
 .unhide{
 	display: inline-block;
 }
-.btnBuy{
+.btnBuy,.botonB__consultar{
 	color: black ;
 	height: 35px;
 	justify-content:center;

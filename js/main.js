@@ -8,6 +8,7 @@ let discountCodes = [
         valor: 0.20,
     }
 ];
+let btnConsultar = $(".botonB__consultar");
 let carImg = $(".carrito");
 let btnLoCompra = $("#boton-comprar");
 let closeCart = $("#closeCart");
@@ -57,6 +58,7 @@ btnChargePlan.click(fullCart);
 closeCart.click(removeCart);
 btnLoCompra.click(msjBuy);
 input.keypress(pressEnter);
+btnConsultar.click(consultaPlan);
 
 function unHidePopUp(){
     if (carrito.status()) { 
@@ -106,6 +108,13 @@ function disabledInput(val){
 
 }
 
+function consultaPlan(evento){
+    let target = $(evento.target);
+    let selectedPlan = promo.find(plan => plan.id == target.val());
+    jistory.addItem(selectedPlan);
+    jistory.savedPlan();
+    window.location.assign("../Pages/contacto.html");
+};
 
 
 
