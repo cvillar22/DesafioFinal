@@ -25,7 +25,14 @@ de pago. Por el momento coloque una Alert para agradecer la compra.
 
    III. Entrega 3:
 En esta instancia se agrega al desafio la incorporación de jQuery para controlar elementos,se incorporó la librería que ofrece ANIMATE.CSS;
-sumando así efectos y animaciones
+sumando así efectos y animaciones.
+
+   IV. Entrega Final del proyecyo:
+Carrito de compras, en el cual se puede colocar un cupon de Desc, se puede probar su funcionamiento colocando CVILLAR o BEONNET.
+También tiene incorporado el útlmimo elemento visto anteriormente por el usuaruio, y la opcion de cargarlo al carro.
+El diseño incluye animaciones, para que se vea mas dinámico e interactivo.
+Incorporé JS en el boton "consultar" para que se direccione directamente a la página de contacto y se seleccione(deje precargado) en las opciones, el plan que el
+usuario habia clickeado en la seccion de servicios.
 
 */
 
